@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Selector"
+    android:orientation="vertical"
+    >
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatPlay"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="120dp"
+        app:rippleColor="@color/white"
+        app:borderWidth="-1dp"
+        android:elevation="16dp"
+        android:focusable="true"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_play_arrow_floating"
+        android:backgroundTint="#DFA7A7"
+
+    />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatNext"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="195dp"
+        app:rippleColor="@color/white"
+        app:borderWidth="-1dp"
+        android:elevation="16dp"
+        android:focusable="true"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_baseline_skip_next_24"
+        android:backgroundTint="#A8CCDD"
+        android:visibility="invisible"
+
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatPrev"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="265dp"
+        app:rippleColor="@color/white"
+        app:borderWidth="-1dp"
+        android:elevation="16dp"
+        android:focusable="true"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_baseline_skip_previous_24"
+        android:backgroundTint="#B1CC91"
+        android:visibility="invisible"
+
+        />
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardBackgroundColor="#B1E4B3"
+        app:cardCornerRadius="10dp"
+        android:layout_alignParentBottom="true"
+
+        android:id="@+id/subCardView">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <ImageButton
+                android:id="@+id/homeButton"
+                android:layout_width="105dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_baseline_home_selected"
+                android:background="@color/Transparent"
+                />
+            <ImageButton
+                android:layout_width="105dp"
+                android:id="@+id/searchButton"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:src="@drawable/ic_baseline_search_24"
+                android:background="@color/Transparent"
+                />
+            <ImageButton
+                android:id="@+id/queueButton"
+                android:layout_width="105dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_baseline_queue_music_24"
+                android:background="@color/Transparent"
+                />
+
+
+
+        </GridLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

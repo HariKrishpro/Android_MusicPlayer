@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="#8E4242"
+    tools:context=".Inside">
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    <ProgressBar
+        android:id="@+id/progressBarPlay"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/common_google_signin_btn_text_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.918" />
+
+    <SeekBar
+        android:id="@+id/seekBarPlaying"
+        android:layout_width="fill_parent"
+        android:layout_height="63dp"
+        android:backgroundTint="#811313"
+        android:foregroundTint="#592020"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.681" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPlay"
+        android:layout_width="102dp"
+        android:layout_height="62dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarPlaying"
+        app:layout_constraintVertical_bias="0.29000002"
+        android:background="@color/Transparent"
+        app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
+
+    <TextView
+        android:id="@+id/textViewAlbum"
+        android:layout_width="341dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="55dp"
+        android:autoText="false"
+        android:background="@android:color/transparent"
+        android:elegantTextHeight="false"
+        android:fontFamily="@font/average"
+        android:freezesText="false"
+        android:text="Album"
+        android:textColor="#020202"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.543" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="334dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/average"
+        android:text="Title"
+        android:textColor="#070707"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.561" />
+
+    <ImageButton
+        android:id="@+id/NextButton"
+        android:layout_width="77dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="111dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonPlay"
+
+        app:layout_constraintTop_toBottomOf="@+id/seekBarPlaying"
+        app:layout_constraintVertical_bias="0.29000002"
+        app:srcCompat="@drawable/ic_baseline_skip_next_24" />
+
+    <ImageButton
+        android:id="@+id/PreviousButton"
+        android:layout_width="77dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="117dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonPlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarPlaying"
+        app:layout_constraintVertical_bias="0.29000002"
+        app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="145dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.155" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
